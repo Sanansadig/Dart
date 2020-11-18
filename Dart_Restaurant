@@ -1,0 +1,31 @@
+void main() {
+  final restaurants = [
+    {
+      'name': "Pizza Mario",
+      'cousine': 'Italian',
+      'rating': [4, 3.5, 4.5]
+    },
+    {
+      'name': "Cehz",
+      'cousine': 'French',
+      'rating': [5, 4.5, 4]
+    },
+    {
+      'name': "Narrito",
+      'cousine': 'Indian',
+      'rating': [4, 4.5, 4]
+    }
+  ];
+
+  for (var block_name in restaurants) {
+    final rati = block_name['rating'] as List<dynamic>;
+    var total = 0.0;
+
+    for (var list_b in rati) {
+      total += list_b;
+    }
+    double finalAverageRating = total / rati.length;
+    print(finalAverageRating);
+  }
+}
+                
